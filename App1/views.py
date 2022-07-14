@@ -94,6 +94,18 @@ def buscar(request):
         respuesta = "No entraste datos"
         return HttpResponse(respuesta)
 
+def busquedaMozos(request):
+    return render (request, "App1/busquedaMozos.html")
+
+def buscarA(request):
+    if request.GET["apellido"]:
+        apellido= request.GET["apellido"]
+        mozo=Mozo.objects.filter(apellido=apellido)
+        return render (request,"App1/resultadoBusqueda.html",{"mozo":mozo})
+    else:
+        return render(request,"App1/busquedaMozos.html",{"error":"No se ingreso apellido"})
+
+
 
 
 
