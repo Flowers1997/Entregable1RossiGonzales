@@ -9,13 +9,9 @@
     <h1>Bienvenido a la pagina de inicio</h1>
   
 
-    <h3>Podes buscar un mozo por apellido:</h3>
+    
 
-    <form action="/App1/buscar/" method="GET">
-
-        <input type="text" name="apellido" id="apellido">
-
-        <input type="submit" value="Buscar">
+    
 
 
 
@@ -24,18 +20,13 @@
 
     
 
-    {% if mozos %}
 
-    <p>Estamos buscando el: {{apellido}}</p>
 
     <ul>
-	{% for mozo in mozos %}
-		<li> {{mozo.nombre}} </li>
-		<li> {{mozo.apellido}} </li>
-	{% endfor %}
+	
 
     </ul>
 
-    {% endif %}
+    
 
 {% endblock %}
