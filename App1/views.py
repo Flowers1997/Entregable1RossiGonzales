@@ -92,7 +92,7 @@ def buscar(request):
     else:
 
         respuesta = "No entraste datos"
-        return HttpResponse(respuesta)
+        return HttpResponse(respuesta) #no se usa esta def
 
 def busquedaMozos(request):
     return render (request, "App1/busquedaMozos.html")
